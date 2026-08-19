@@ -1,4 +1,3 @@
-// Lightbox: klik na zdjęcie w galerii otwiera powiększony podgląd.
 const lightbox = document.getElementById('lightbox');
 const lightboxFrame = document.getElementById('lightboxFrame');
 const lightboxCaption = document.getElementById('lightboxCaption');
