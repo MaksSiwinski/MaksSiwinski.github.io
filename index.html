@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ania Nowak — Fotografia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a href="#top" class="nav__mark">Marci&Roxane</a>
+  <nav class="nav__links">
+    <a href="#galeria">Portfolio</a>
+    <a href="#o-mnie">O mnie</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero__inner">
+    <p class="hero__eyebrow">Fotografki · Poznań</p>
+    <h1 class="hero__title">Marcelina<br>Roksana</h1>
+    <p class="hero__tagline">Światło, cisza i to, co między kadrami.<br>Fotografia analogowa i cyfrowa.</p>
+  </div>
+  <a href="#galeria" class="hero__scroll" aria-label="Przewiń do portfolio">
+    <span></span>
+    Portfolio
+  </a>
+</section>
+
+<!-- ============ GALERIA (masonry) ============ -->
+<section class="gallery" id="galeria">
+  <div class="section-head">
+    <h2 class="section-head__title">Portfolio</h2>
+    <p class="section-head__note">wybrane kadry, 2022–2026</p>
+  </div>
+
+  <!--
+    INSTRUKCJA: każdy .photo to jedno zdjęcie.
+    Zamień <div class="photo__ph"> na:
+      <img src="images/nazwa-pliku.jpg" alt="Opis zdjęcia" loading="lazy">
+    Klasa .h1 / .h2 / .h3 na .photo kontroluje względną wysokość
+    (do imitacji układu masonry, zanim wstawisz prawdziwe zdjęcia
+    o naturalnych proporcjach — realne zdjęcia same ułożą się poprawnie).
+  -->
+
+  <div class="masonry">
+
+    <figure class="photo h2" data-frame="001">
+      <div class="photo__ph ph--a"></div>
+      <figcaption><span class="frame">N° 001</span> Mokre asfalty, Gdańsk</figcaption>
+    </figure>
+
+    <figure class="photo h1" data-frame="002">
+      <div class="photo__ph ph--b"></div>
+      <figcaption><span class="frame">N° 002</span> Poranna mgła, Zatoka Pucka</figcaption>
+    </figure>
+
+    <figure class="photo h3" data-frame="003">
+      <div class="photo__ph ph--c"></div>
+      <figcaption><span class="frame">N° 003</span> Portret, światło zachodnie</figcaption>
+    </figure>
+
+    <figure class="photo h2" data-frame="004">
+      <div class="photo__ph ph--d"></div>
+      <figcaption><span class="frame">N° 004</span> Molo, godzina błękitna</figcaption>
+    </figure>
+
+    <figure class="photo h1" data-frame="005">
+      <div class="photo__ph ph--e"></div>
+      <figcaption><span class="frame">N° 005</span> Cienie na klatce schodowej</figcaption>
+    </figure>
+
+    <figure class="photo h2" data-frame="006">
+      <div class="photo__ph ph--f"></div>
+      <figcaption><span class="frame">N° 006</span> Szron, ogród botaniczny</figcaption>
+    </figure>
+
+    <figure class="photo h3" data-frame="007">
+      <div class="photo__ph ph--g"></div>
+      <figcaption><span class="frame">N° 007</span> Dworzec, 6:12</figcaption>
+    </figure>
+
+    <figure class="photo h1" data-frame="008">
+      <div class="photo__ph ph--h"></div>
+      <figcaption><span class="frame">N° 008</span> Fala, film 35mm</figcaption>
+    </figure>
+
+    <figure class="photo h2" data-frame="009">
+      <div class="photo__ph ph--a"></div>
+      <figcaption><span class="frame">N° 009</span> Okno, deszczowy wtorek</figcaption>
+    </figure>
+
+  </div>
+</section>
+
+<!-- ============ O MNIE ============ -->
+<section class="about" id="o-mnie">
+  <div class="about__portrait">
+    <div class="photo__ph ph--i"></div>
+  </div>
+  <div class="about__content">
+    <h2 class="section-head__title">O mnie</h2>
+    <p class="about__text">
+      Fotografią zajmuję się od dziesięciu lat — zaczynałam od taniej lustrzanki
+      i ciemni w piwnicy, dziś łączę film i cyfrę w zależności od tego, czego
+      wymaga kadr. Interesuje mnie światło poboczne: wczesny poranek, późne
+      popołudnie, wnętrza bez sztucznego oświetlenia.
+    </p>
+    <p class="about__text">
+      Pracuję głównie w Trójmieście, ale chętnie wyjeżdżam — im dalej od
+      utartych tras, tym lepiej. Zlecenia realizuję zarówno komercyjnie,
+      jak i w formie prywatnych sesji.
+    </p>
+    <dl class="about__facts">
+      <div><dt>Bazuję w</dt><dd>Gdańsk, PL</dd></div>
+      <div><dt>Sprzęt</dt><dd>Leica M6 · Fujifilm X-T5</dd></div>
+      <div><dt>Specjalizacja</dt><dd>Portret, ulica, krajobraz</dd></div>
+      <div><dt>Dostępność</dt><dd>Sesje od kwietnia 2027</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ============ KONTAKT ============ -->
+<section class="contact" id="kontakt">
+  <h2 class="section-head__title">Kontakt</h2>
+  <p class="contact__note">Masz pomysł na sesję albo pytanie o dostępność? Napisz.</p>
+  <a class="contact__email" href="mailto:ania.nowak.foto@gmail.com">ania.nowak.foto@gmail.com</a>
+  <div class="contact__social">
+    <a href="#">Instagram</a>
+    <span>·</span>
+    <a href="#">Behance</a>
+    <span>·</span>
+    <a href="#">500px</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <span>© 2026 Ania Nowak</span>
+  <a href="#top">do góry ↑</a>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox__close" id="lightboxClose" aria-label="Zamknij">✕</button>
+  <div class="lightbox__frame" id="lightboxFrame"></div>
+  <p class="lightbox__caption" id="lightboxCaption"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
