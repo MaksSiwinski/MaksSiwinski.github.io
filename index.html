@@ -1,146 +1,204 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Marci&Roxane</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Marcelina i Roksana — fotografki z Poznania. Sesje, 18-stki, urodziny i wyjątkowe chwile uchwycone w naturalnych kadrach.">
+  <meta name="theme-color" content="#294930">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Marci&Roxane — fotografia">
+  <meta property="og:description" content="Fotografia pełna emocji. Marcelina i Roksana, Poznań.">
+  <title>Marci&Roxane — fotografia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,0..72,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="nav" id="nav">
-  <a href="#top" class="nav__mark">Marci&Roxane</a>
-  <nav class="nav__links">
+  <a href="#top" class="nav__mark" aria-label="Marci&Roxane — strona główna">Marci&Roxane</a>
+  <nav class="nav__links" aria-label="Główna nawigacja">
     <a href="#galeria">Portfolio</a>
-    <a href="#o-mnie">O nas</a>
+    <a href="#o-nas">O nas</a>
     <a href="#kontakt">Kontakt</a>
   </nav>
 </header>
 
-<!-- ============ HERO ============ -->
-<section class="hero" id="top">
-  <div class="hero__inner">
-    <p class="hero__eyebrow">Fotografki · Poznań</p>
-    <h1 class="hero__title">Marcelina<br>Roksana</h1>
-    <p class="hero__tagline">zatrzymujemy chwile, których nie da się powtórzyć.</p>
-  </div>
-  <a href="#galeria" class="hero__scroll" aria-label="Przewiń do portfolio">
-    <span></span>
-    Portfolio
-  </a>
-</section>
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="hero__inner">
+      <p class="hero__eyebrow">Fotografki · Poznań</p>
+      <h1 class="hero__title" id="hero-title">Marcelina<br>Roksana</h1>
+      <p class="hero__tagline">zatrzymujemy chwile, których nie da się powtórzyć.</p>
+      <div class="hero__actions">
+        <a href="#galeria" class="button button--primary">Zobacz portfolio <span>↓</span></a>
+        <a href="#kontakt" class="button button--ghost">Napisz do nas <span>↗</span></a>
+      </div>
+    </div>
+    <a href="#galeria" class="hero__scroll" aria-label="Przewiń do portfolio">
+      <span></span>
+      Portfolio
+    </a>
+  </section>
 
-<!-- ============ GALERIA (masonry) ============ -->
-<section class="gallery" id="galeria">
-  <div class="section-head">
-    <h2 class="section-head__title">Portfolio</h2>
-    <p class="section-head__note">wybrane kadry, 2022–2026</p>
-  </div>
+  <!-- ============ GALERIA ============ -->
+  <section class="gallery" id="galeria" aria-labelledby="gallery-title">
+    <div class="section-head">
+      <div>
+        <p class="section-kicker">01 / portfolio</p>
+        <h2 class="section-head__title" id="gallery-title">Wybrane kadry</h2>
+      </div>
+      <p class="section-head__note">2022—2026 · Poznań i okolice</p>
+    </div>
 
-  <!--
-    INSTRUKCJA: każdy .photo to jedno zdjęcie.
-    Zamień <div class="photo__ph"> na:
-      <img src="images/nazwa-pliku.jpg" alt="Opis zdjęcia" loading="lazy">
-    Klasa .h1 / .h2 / .h3 na .photo kontroluje względną wysokość
-    (do imitacji układu masonry, zanim wstawisz prawdziwe zdjęcia
-    o naturalnych proporcjach — realne zdjęcia same ułożą się poprawnie).
-  -->
+    <!--
+      Na razie zostawiamy gradientowe placeholdery.
+      Docelowo każdy .photo__ph można zastąpić <img> bez zmiany układu strony.
+    -->
+    <div class="masonry">
+      <figure class="photo h2" data-frame="001" tabindex="0">
+        <div class="photo__ph ph--a"></div>
+        <figcaption><span class="frame">N° 001</span> Mokre asfalty, Gdańsk</figcaption>
+      </figure>
 
-  <div class="masonry">
+      <figure class="photo h1" data-frame="002" tabindex="0">
+        <div class="photo__ph ph--b"></div>
+        <figcaption><span class="frame">N° 002</span> Poranna mgła, Zatoka Pucka</figcaption>
+      </figure>
 
-    <figure class="photo h2" data-frame="001">
-      <div class="photo__ph ph--a"></div>
-      <figcaption><span class="frame">N° 001</span> Mokre asfalty, Gdańsk</figcaption>
-    </figure>
+      <figure class="photo h3" data-frame="003" tabindex="0">
+        <div class="photo__ph ph--c"></div>
+        <figcaption><span class="frame">N° 003</span> Portret, światło zachodnie</figcaption>
+      </figure>
 
-    <figure class="photo h1" data-frame="002">
-      <div class="photo__ph ph--b"></div>
-      <figcaption><span class="frame">N° 002</span> Poranna mgła, Zatoka Pucka</figcaption>
-    </figure>
+      <figure class="photo h2" data-frame="004" tabindex="0">
+        <div class="photo__ph ph--d"></div>
+        <figcaption><span class="frame">N° 004</span> Molo, godzina błękitna</figcaption>
+      </figure>
 
-    <figure class="photo h3" data-frame="003">
-      <div class="photo__ph ph--c"></div>
-      <figcaption><span class="frame">N° 003</span> Portret, światło zachodnie</figcaption>
-    </figure>
+      <figure class="photo h1" data-frame="005" tabindex="0">
+        <div class="photo__ph ph--e"></div>
+        <figcaption><span class="frame">N° 005</span> Cienie na klatce schodowej</figcaption>
+      </figure>
 
-    <figure class="photo h2" data-frame="004">
-      <div class="photo__ph ph--d"></div>
-      <figcaption><span class="frame">N° 004</span> Molo, godzina błękitna</figcaption>
-    </figure>
+      <figure class="photo h2" data-frame="006" tabindex="0">
+        <div class="photo__ph ph--f"></div>
+        <figcaption><span class="frame">N° 006</span> Szron, ogród botaniczny</figcaption>
+      </figure>
 
-    <figure class="photo h1" data-frame="005">
-      <div class="photo__ph ph--e"></div>
-      <figcaption><span class="frame">N° 005</span> Cienie na klatce schodowej</figcaption>
-    </figure>
+      <figure class="photo h3" data-frame="007" tabindex="0">
+        <div class="photo__ph ph--g"></div>
+        <figcaption><span class="frame">N° 007</span> Dworzec, 6:12</figcaption>
+      </figure>
 
-    <figure class="photo h2" data-frame="006">
-      <div class="photo__ph ph--f"></div>
-      <figcaption><span class="frame">N° 006</span> Szron, ogród botaniczny</figcaption>
-    </figure>
+      <figure class="photo h1" data-frame="008" tabindex="0">
+        <div class="photo__ph ph--h"></div>
+        <figcaption><span class="frame">N° 008</span> Fala, film 35mm</figcaption>
+      </figure>
 
-    <figure class="photo h3" data-frame="007">
-      <div class="photo__ph ph--g"></div>
-      <figcaption><span class="frame">N° 007</span> Dworzec, 6:12</figcaption>
-    </figure>
+      <figure class="photo h2" data-frame="009" tabindex="0">
+        <div class="photo__ph ph--a"></div>
+        <figcaption><span class="frame">N° 009</span> Okno, deszczowy wtorek</figcaption>
+      </figure>
+    </div>
+  </section>
 
-    <figure class="photo h1" data-frame="008">
-      <div class="photo__ph ph--h"></div>
-      <figcaption><span class="frame">N° 008</span> Fala, film 35mm</figcaption>
-    </figure>
+  <!-- ============ OFERTA ============ -->
+  <section class="services" id="oferta" aria-labelledby="services-title">
+    <div class="section-head section-head--services">
+      <div>
+        <p class="section-kicker">02 / razem</p>
+        <h2 class="section-head__title" id="services-title">Co fotografujemy?</h2>
+      </div>
+      <p class="section-head__note">naturalnie · bez sztywnych póz</p>
+    </div>
 
-    <figure class="photo h2" data-frame="009">
-      <div class="photo__ph ph--a"></div>
-      <figcaption><span class="frame">N° 009</span> Okno, deszczowy wtorek</figcaption>
-    </figure>
+    <div class="services__grid">
+      <article class="service">
+        <span class="service__number">01</span>
+        <h3>Sesje</h3>
+        <p>Portrety, pary i lifestyle. Luźna atmosfera, naturalne emocje i kadry, które wyglądają jak Wy.</p>
+      </article>
+      <article class="service">
+        <span class="service__number">02</span>
+        <h3>Eventy</h3>
+        <p>18-stki, urodziny i imprezy. Jesteśmy tam, gdzie dzieje się coś ważnego — i łapiemy to, czego nie da się powtórzyć.</p>
+      </article>
+      <article class="service">
+        <span class="service__number">03</span>
+        <h3>Reportaż</h3>
+        <p>Spontaniczne momenty, detale i prawdziwe emocje. Zamiast ustawiania — obserwacja i historia opowiedziana zdjęciami.</p>
+      </article>
+    </div>
+  </section>
 
-  </div>
-</section>
+  <!-- ============ O NAS ============ -->
+  <section class="about" id="o-nas" aria-labelledby="about-title">
+    <div class="about__portrait">
+      <div class="photo__ph ph--i"></div>
+      <span class="about__portrait-label">Marcelina &amp; Roksana · Poznań</span>
+    </div>
+    <div class="about__content">
+      <p class="section-kicker">03 / o nas</p>
+      <h2 class="section-head__title" id="about-title">Dwie przyjaciółki,<br>jeden wspólny kadr.</h2>
+      <p class="about__text">
+        Hej! Jesteśmy Marcelina i Roksana — dwie przyjaciółki, które połączyła nie tylko pasja do fotografii, ale też zamiłowanie do uwieczniania najlepszych momentów.
+      </p>
+      <p class="about__text">
+        Ukończyłyśmy technikum fotograficzne w Poznaniu, a fotografią zajmujemy się już od 6 lat. Przez ten czas zdobyłyśmy doświadczenie i przede wszystkim odkryłyśmy, że najlepiej czujemy się wtedy, gdy możemy tworzyć razem. Lubimy spontaniczne kadry, prawdziwe emocje, dobrą zabawę i zdjęcia, do których chce się wracać.
+      </p>
+      <p class="about__text">
+        Chcemy, żeby nasze fotografie nie były tylko pamiątką, ale przypominały Wam dokładnie te emocje, które towarzyszyły Wam w danym momencie.
+      </p>
+      <div class="about__facts" aria-label="Najważniejsze informacje">
+        <div><span>01</span><strong>Poznań</strong></div>
+        <div><span>02</span><strong>6 lat fotografii</strong></div>
+        <div><span>03</span><strong>2 fotografki</strong></div>
+        <div><span>04</span><strong>Naturalne kadry</strong></div>
+      </div>
+    </div>
+  </section>
 
-<!-- ============ O MNIE ============ -->
-<section class="about" id="o-mnie">
-  <div class="about__portrait">
-    <div class="photo__ph ph--i"></div>
-  </div>
-  <div class="about__content">
-    <h2 class="section-head__title">O nas</h2>
-    <p class="about__text">
-      Hej! Jesteśmy Marcelina i Roksana; dwie przyjaciółki, które połączyła nie tylko pasja do fotografii, ale też zamiłowanie do uwieczniania najlepszych momentów.
-Ukończyłyśmy technikum fotograficzne w Poznaniu, a fotografią zajmujemy się już od 6 lat. Przez ten czas zdobyłyśmy doświadczenie i przede wszystkim odkryłyśmy, że najlepiej czujemy się wtedy, gdy możemy tworzyć razem! Lubimy spontaniczne kadry, prawdziwe emocje, dobrą zabawę i zdjęcia, do których chce się wracać. Chcemy, żeby nasze fotografie nie były tylko pamiątką, ale przypominały Wam dokładnie te emocje, które towarzyszyły Wam w danym momencie. Uwielbiamy fotografować razem i cieszymy się, że możemy połączyć naszą przyjaźń z tym, co naprawdę lubimy.
-    </p>
-    <p class="about__text">
-      Chętnie uwiecznimy Wasze 18-stki, urodziny, imprezy i wszystkie wyjątkowe momenty, które chcecie zatrzymać na dłużej.
-Do zobaczenia przed naszymi obiektywami!
-    </p>
-    
-  </div>
-</section>
+  <!-- ============ CTA ============ -->
+  <section class="cta" aria-labelledby="cta-title">
+    <p class="section-kicker">04 / Twoja historia</p>
+    <h2 id="cta-title">Masz moment,<br>który chcesz zatrzymać?</h2>
+    <a href="#kontakt" class="button button--primary">Porozmawiajmy <span>↗</span></a>
+  </section>
 
-<!-- ============ KONTAKT ============ -->
-<section class="contact" id="kontakt">
-  <h2 class="section-head__title">Kontakt</h2>
-  <p class="contact__note">Masz pomysł na sesję albo pytanie o dostępność? Napisz.</p>
-  <a class="contact__email" href="mailto:ania.nowak.foto@gmail.com">marci&roxane@gmail.com</a>
-  <div class="contact__social">
-    <a target="_blank" href="https://www.instagram.com/">Instagram</a>
-    <span>·</span>
-    <a target="_blank" href="https://www.facebook.com/">Facebook</a>
-    <span>·</span>
-    <a target="_blank" href="https://www.tiktok.com/">TikTok</a>
-  </div>
-</section>
+  <!-- ============ KONTAKT ============ -->
+  <section class="contact" id="kontakt" aria-labelledby="contact-title">
+    <p class="section-kicker">05 / kontakt</p>
+    <h2 class="section-head__title" id="contact-title">Napisz do nas</h2>
+    <p class="contact__note">Masz pomysł na sesję albo pytanie o dostępność? Chętnie poznamy Wasz pomysł.</p>
+    <a class="contact__email" href="mailto:marci&amp;roxane@gmail.com">marci&amp;roxane@gmail.com</a>
+    <div class="contact__social" aria-label="Media społecznościowe">
+      <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/">Instagram</a>
+      <span>·</span>
+      <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/">Facebook</a>
+      <span>·</span>
+      <a target="_blank" rel="noopener noreferrer" href="https://www.tiktok.com/">TikTok</a>
+    </div>
+  </section>
+</main>
 
 <footer class="footer">
-  <span>© 2026 Marci&Roxane</span>
+  <span>© 2026 Marci&amp;Roxane</span>
   <a href="#top">do góry ↑</a>
 </footer>
 
-<div class="lightbox" id="lightbox">
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Podgląd zdjęcia" aria-hidden="true">
   <button class="lightbox__close" id="lightboxClose" aria-label="Zamknij">✕</button>
+  <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Poprzednie zdjęcie">←</button>
   <div class="lightbox__frame" id="lightboxFrame"></div>
-  <p class="lightbox__caption" id="lightboxCaption"></p>
+  <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Następne zdjęcie">→</button>
+  <div class="lightbox__meta">
+    <span class="lightbox__counter" id="lightboxCounter"></span>
+    <p class="lightbox__caption" id="lightboxCaption"></p>
+  </div>
 </div>
 
 <script src="script.js"></script>
