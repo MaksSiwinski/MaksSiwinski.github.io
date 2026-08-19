@@ -663,6 +663,9 @@ h3{
 
   background: var(--bg);
 
+  border-top:
+    1px solid var(--line);
+
 }
 
 .contact__note{
@@ -860,7 +863,7 @@ h3{
 }
 
 
-@media (max-width: 451px){
+@media (max-width: 450px){
 
   .nav{
     padding: 1rem;
